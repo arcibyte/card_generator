@@ -3,9 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card generator</title>
+    <title>Card generator </title>
 </head>
 <body>
-    
+    <div id="app">
+        <h1>Create your personal card</h1>
+        <form id="cardForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Eg: Jhon Arciniegas" required>
+
+            <label for="occupation">Occupancy:</label>
+            <input type="text" id="occupation" placeholder="Eg: Software engineer" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" placeholder="Eg: jhon123@email.com" required>
+
+            <label for="socialMedia">Social media:</label>
+            <input type="text" id="socialMedia" placeholder="Comma separated social media links">
+
+            <label for="cardColor">Card Color:</label>
+            <input type="color" id="cardColor" value="#4caf50">
+
+            <label for="imageShape">Image Shape:</label>
+            <select id="imageShape" name="imageShape">
+                <option value="square">Square</option>
+                <option value="circle">Circle</option>
+            </select>
+
+            <label for="image">Image:</label>
+            <input type="file" id="image" accept="image/*">
+
+            <button type="submit">Generate card</button>
+        </form>
+
+        <div id="cardContainer" class="hidden">
+            <div id="generatedCard">
+            </div>
+        </div>
+    </div>
 </body>
 </html>
